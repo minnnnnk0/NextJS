@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Navigation from '../components/navigation';
 
 export const metadata: Metadata = {
   title: {
@@ -8,14 +9,13 @@ export const metadata: Metadata = {
   description: 'Practcing NextJS Framework',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }
