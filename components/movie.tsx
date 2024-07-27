@@ -19,7 +19,10 @@ export default function Movie({ title, id, poster_path }: IMoveProps) {
   return (
     <div className={styles.movie}>
       <img src={poster_path} alt={title} onClick={onClick} />
-      <Link href={`/movies/${id}`}>{title}</Link>
+      {/* 리소스 미리 불러오기를 통해 사용자 경험 향상 ( 과부하 방지를 위해 특정 페이지, 컴포넌트에만 활용 ) */}
+      <Link prefetch href={`/movies/${id}`}>
+        {title}
+      </Link>
     </div>
   );
 }
