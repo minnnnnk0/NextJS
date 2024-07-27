@@ -4,7 +4,9 @@
   "description": "Practice NextJS framwork with Typescript",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "keywords": [],
   "author": "",
